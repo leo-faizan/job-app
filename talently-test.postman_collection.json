@@ -1,0 +1,458 @@
+{
+	"info": {
+		"_postman_id": "871a5404-bee3-487f-8e51-2bf67c9022bf",
+		"name": "talently-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add jobs",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"React Developer\",\n    \"description\": \"We need a react developer\",\n    \"location\": \"Chennai, India\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/jobs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"jobs"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "add jobs",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"React Developer\",\n    \"description\": \"We need a react developer\",\n    \"location\": \"Chennai, India\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/jobs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"jobs"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "182"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"b6-5FUu5xpHM+/11jEvIfk0qZ6LKb0\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 28 Jul 2025 12:49:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"title\": \"React Developer\",\n    \"description\": \"We need a react developer\",\n    \"location\": \"Chennai, India\",\n    \"updatedAt\": \"2025-07-28T12:49:36.790Z\",\n    \"createdAt\": \"2025-07-28T12:49:36.790Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get jobs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/jobs",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"jobs"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get jobs",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/jobs",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"jobs"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "184"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"b8-gFnHBQgoXrMyIkrsMeLoE4cAnBs\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 28 Jul 2025 12:49:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"React Developer\",\n        \"description\": \"We need a react developer\",\n        \"location\": \"Chennai, India\",\n        \"createdAt\": \"2025-07-28T12:49:36.000Z\",\n        \"updatedAt\": \"2025-07-28T12:49:36.000Z\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "get applications of a job",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/jobs/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"jobs",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get applications of a job",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/jobs/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"jobs",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "400"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"190-XbM8an18tulRgi5HitpnygrQahw\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 28 Jul 2025 11:42:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"title\": null,\n    \"description\": \"We need a full stack developer\",\n    \"location\": \"Chennai, India\",\n    \"createdAt\": \"2025-07-28T11:34:15.000Z\",\n    \"updatedAt\": \"2025-07-28T11:34:15.000Z\",\n    \"applications\": [\n        {\n            \"id\": 1,\n            \"applicant_name\": \"Faizan Hamid\",\n            \"email\": \"faizanhamid7860@gmail.com\",\n            \"resume_url\": \"https://someresumelink.link\",\n            \"createdAt\": \"2025-07-28T11:42:48.000Z\",\n            \"updatedAt\": \"2025-07-28T11:42:48.000Z\",\n            \"job_id\": 1\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "apply to job",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"applicant_name\": \"Faizan Hamid\", \n     \"email\": \"faizanhamid7860@gmail.com\", \n     \"resume_url\": \"https://someresumelink.link\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/jobs/:id/apply",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"jobs",
+						":id",
+						"apply"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "apply to job",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n     \"applicant_name\": \"Faizan Hamid\", \n     \"email\": \"faizanhamid7860@gmail.com\", \n     \"resume_url\": \"https://someresumelink.link\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/jobs/:id/apply",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"jobs",
+								":id",
+								"apply"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "43"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2b-S6WuawWLh4OZuhEPHnLcNUbaDtU\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 28 Jul 2025 11:43:17 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Resume URL must start with http\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Jobs (elastic search)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/jobs/search?keyword=&location=&page=1&limit=10",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"jobs",
+						"search"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": ""
+						},
+						{
+							"key": "location",
+							"value": ""
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Jobs (elastic search)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/jobs/search?keyword=&location=&page=1&limit=10",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"jobs",
+								"search"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": ""
+								},
+								{
+									"key": "location",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "600"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"258-ys4P6r5xC6czDyr83R/JiGqi0Ng\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 28 Jul 2025 12:44:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"jobs\": [\n            {\n                \"id\": 2,\n                \"title\": \"React Developer\",\n                \"description\": \"We need a react developer\",\n                \"location\": \"Chennai, India\",\n                \"createdAt\": \"2025-07-28T12:41:42.420Z\",\n                \"updatedAt\": \"2025-07-28T12:41:42.420Z\",\n                \"score\": 1\n            },\n            {\n                \"id\": 1,\n                \"title\": \"Node Developer\",\n                \"description\": \"We need a nodeJs developer\",\n                \"location\": \"Chennai, India\",\n                \"createdAt\": \"2025-07-28T12:41:29.746Z\",\n                \"updatedAt\": \"2025-07-28T12:41:29.746Z\",\n                \"score\": 1\n            }\n        ],\n        \"facets\": {\n            \"locations\": [\n                {\n                    \"value\": \"Chennai, India\",\n                    \"count\": 2\n                }\n            ],\n            \"creationDates\": [\n                {\n                    \"value\": \"2025-07\",\n                    \"count\": 2\n                }\n            ],\n            \"total\": 2\n        },\n        \"pagination\": {\n            \"page\": 1,\n            \"limit\": 10,\n            \"total\": 2,\n            \"totalPages\": 1\n        }\n    }\n}"
+				}
+			]
+		}
+	]
+}
